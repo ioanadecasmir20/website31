@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="SecuriWise Training delivers Level 2 & Level 3 First Aid, ACT Awareness & ACT Security, plus e-learning/CPD for security and workplace safety." />
+
+  <title>SecuriWise Training | First Aid • ACT • eLearning/CPD</title>
+
+  <!-- Favicons (place in /images) -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Social preview (replace image if you wish) -->
+  <meta property="og:title" content="SecuriWise Training" />
+  <meta property="og:description" content="First Aid (L2/L3), ACT Awareness & ACT Security, plus e-learning/CPD." />
+  <meta property="og:image" content="images/og-image.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Top bar -->
+  <div class="topbar" role="note" aria-label="Quick contact">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="chip chip--quiet">Covering: <strong>CB24 9AD</strong> • <strong>PE29 6FN</strong></span>
+        <span class="topbar__sep" aria-hidden="true">•</span>
+        <button class="linklike" data-copy="0123 826147" aria-label="Copy phone number">0123 826147</button>
+        <span class="topbar__sep" aria-hidden="true">•</span>
+        <button class="linklike" data-copy="info@securiwisetraining.co.uk" aria-label="Copy email address">info@securiwisetraining.co.uk</button>
+      </div>
+
+      <div class="topbar__right">
+        <a class="btn btn--small btn--ghost" href="#contact">Enquire</a>
+        <button class="btn btn--small btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true">◐</span><span class="hide-sm">Theme</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="SecuriWise Training home">
+        <img class="brand__logo" src="images/logo.png" alt="SecuriWise Training logo" />
+        <span class="brand__text">
+          <span class="brand__name">SecuriWise</span>
+          <span class="brand__tag">Training</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleLines" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#courses">Courses</a>
+          <a class="nav__link" href="#elearning">eLearning/CPD</a>
+          <a class="nav__link" href="#how">How it works</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+          <a class="nav__link nav__cta" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Practical • Learner-focused • Workplace-ready</p>
+          <h1>Training that builds <span class="grad">confidence</span> when it matters.</h1>
+          <p class="lead">
+            We deliver <strong>Level 2 & Level 3 First Aid</strong>, <strong>ACT Awareness</strong> and <strong>ACT Security</strong>,
+            plus focused <strong>e-learning/CPD</strong> for security and workplace safety.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#courses">Explore courses</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="path">
+            <p class="path__label">Pick a path (filters the page):</p>
+            <div class="path__chips" role="group" aria-label="Course quick filters">
+              <button class="chip chip--active" data-filter="all" type="button">All</button>
+              <button class="chip" data-filter="firstaid" type="button">First Aid</button>
+              <button class="chip" data-filter="act" type="button">ACT</button>
+              <button class="chip" data-filter="cpd" type="button">eLearning/CPD</button>
+            </div>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <span class="trust__num" data-count="7">0</span>
+              <span class="trust__label">Short, focused modules</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__num" data-count="100">0</span>
+              <span class="trust__label">Practical emphasis</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__num" data-count="2">0</span>
+              <span class="trust__label">Coverage areas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card reveal" aria-label="Quick enquiry card">
+          <div class="glassCard">
+            <h2>Quick enquiry</h2>
+            <p class="muted">Tell us what you need and we’ll reply by email.</p>
+
+            <form id="quickForm" class="form">
+              <label>
+                <span>Your name</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+
+              <label>
+                <span>Interested in</span>
+                <select name="topic" required>
+                  <option value="" selected disabled>Select…</option>
+                  <option>Level 2 First Aid</option>
+                  <option>Level 3 First Aid</option>
+                  <option>ACT Awareness</option>
+                  <option>ACT Security</option>
+                  <option>eLearning/CPD</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="3" placeholder="Dates, group size, location…" required></textarea>
+              </label>
+
+              <button class="btn btn--full" type="submit">Open email draft</button>
+              <p class="tiny muted">No forms backend needed — this opens your email client with the details filled in.</p>
+            </form>
+
+            <div class="divider"></div>
+
+            <div class="mini">
+              <div class="mini__row">
+                <span class="mini__k">Call</span>
+                <button class="linklike" data-copy="0123 826147">0123 826147</button>
+              </div>
+              <div class="mini__row">
+                <span class="mini__k">Email</span>
+                <button class="linklike" data-copy="info@securiwisetraining.co.uk">info@securiwisetraining.co.uk</button>
+              </div>
+              <div class="mini__row">
+                <span class="mini__k">Areas</span>
+                <span class="mini__v">CB24 9AD • PE29 6FN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Courses</h2>
+          <p class="muted">Tap a course to see a quick overview (and what’s included).</p>
+        </div>
+
+        <div class="grid cards" id="courseGrid" aria-label="Course list">
+          <!-- First Aid -->
+          <article class="card reveal" data-tags="firstaid">
+            <div class="card__top">
+              <span class="pill">First Aid</span>
+              <button class="iconBtn" data-open="l2" aria-label="Open details">+</button>
+            </div>
+            <h3>Level 2 First Aid</h3>
+            <p class="muted">Solid fundamentals for workplaces and teams.</p>
+            <ul class="ticks">
+              <li>Core life-saving actions</li>
+              <li>Common incidents & reporting</li>
+              <li>Practical confidence-building</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-tags="firstaid">
+            <div class="card__top">
+              <span class="pill">First Aid</span>
+              <button class="iconBtn" data-open="l3" aria-label="Open details">+</button>
+            </div>
+            <h3>Level 3 First Aid</h3>
+            <p class="muted">More depth, scenarios and decision-making.</p>
+            <ul class="ticks">
+              <li>Advanced incident response</li>
+              <li>Scenario-led practicals</li>
+              <li>Team leadership in emergencies</li>
+            </ul>
+          </article>
+
+          <!-- ACT -->
+          <article class="card reveal" data-tags="act">
+            <div class="card__top">
+              <span class="pill pill--warn">ACT</span>
+              <button class="iconBtn" data-open="act-awareness" aria-label="Open details">+</button>
+            </div>
+            <h3>ACT Awareness</h3>
+            <p class="muted">Recognise, respond, report — a clear foundation.</p>
+            <ul class="ticks">
+              <li>Recognising suspicious behaviour</li>
+              <li>Practical actions & escalation</li>
+              <li>Situational awareness</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-tags="act">
+            <div class="card__top">
+              <span class="pill pill--warn">ACT</span>
+              <button class="iconBtn" data-open="act-security" aria-label="Open details">+</button>
+            </div>
+            <h3>ACT Security</h3>
+            <p class="muted">Security-focused detail, roles and procedures.</p>
+            <ul class="ticks">
+              <li>Role-led responsibilities</li>
+              <li>Threat response principles</li>
+              <li>Communication & coordination</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="note reveal">
+          <div class="note__icon" aria-hidden="true">✦</div>
+          <div class="note__body">
+            <p><strong>Need something bespoke?</strong> We can tailor sessions for team size, shift patterns and venue requirements.</p>
+          </div>
+          <a class="btn btn--ghost" href="#contact">Ask a question</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- eLearning / CPD -->
+    <section class="section section--alt" id="elearning">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>eLearning / CPD</h2>
+          <p class="muted">Search and filter to find what you need — then enquire for access.</p>
+        </div>
+
+        <div class="cpdTools reveal">
+          <div class="cpdTools__left">
+            <label class="search">
+              <span class="sr-only">Search CPD</span>
+              <input id="cpdSearch" type="search" placeholder="Search CPD (e.g., lone working, ethics…)" />
+            </label>
+
+            <div class="tagRow" role="group" aria-label="CPD filters">
+              <button class="chip chip--active" data-cpd="all" type="button">All</button>
+              <button class="chip" data-cpd="safety" type="button">Safety</button>
+              <button class="chip" data-cpd="professional" type="button">Professional</button>
+              <button class="chip" data-cpd="reporting" type="button">Reporting</button>
+            </div>
+          </div>
+
+          <div class="cpdTools__right">
+            <div class="checker" aria-label="Coverage checker">
+              <span class="checker__label">Check coverage:</span>
+              <input id="postcode" type="text" inputmode="text" placeholder="Enter postcode" />
+              <button class="btn btn--small" id="checkBtn" type="button">Check</button>
+              <span class="checker__out" id="checkOut" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid cards" id="cpdGrid" aria-label="CPD list">
+          <article class="card card--compact reveal" data-cpd-tags="safety">
+            <div class="card__top">
+              <span class="pill pill--quiet">CPD</span>
+              <button class="iconBtn" data-open="cpd-lone" aria-label="Open details">+</button>
+            </div>
+            <h3>Lone Working</h3>
+            <p class="muted">Risk awareness, planning and safer decision-making.</p>
+          </article>
+
+          <article class="card card--compact reveal" data-cpd-tags="professional">
+            <div class="card__top">
+              <span class="pill pill--quiet">CPD</span>
+              <button class="iconBtn" data-open="cpd-ethics" aria-label="Open details">+</button>
+            </div>
+            <h3>Security Operative Ethics at Workplace</h3>
+            <p class="muted">Professional boundaries, integrity and conduct.</p>
+          </article>
+
+          <article class="card card--compact reveal" data-cpd-tags="professional">
+            <div class="card__top">
+              <span class="pill pill--quiet">CPD</span>
+              <button class="iconBtn" data-open="cpd-conflict" aria-label="Open details">+</button>
+            </div>
+            <h3>Conflict Management Refresher</h3>
+            <p class="muted">Communication, calm control and de-escalation.</p>
+          </article>
+
+          <article class="card card--compact reveal" data-cpd-tags="professional">
+            <div class="card__top">
+              <span class="pill pill--quiet">CPD</span>
+              <button class="iconBtn" data-open="cpd-safeguarding" aria-label="Open details">+</button>
+            </div>
+            <h3>Safeguarding & Duty of Care</h3>
+            <p class="muted">Recognise concerns and act responsibly.</p>
+          </article>
+
+          <article class="card card--compact reveal" data-cpd-tags="reporting">
+            <div class="card__top">
+              <span class="pill pill--quiet">CPD</span>
+              <button class="iconBtn" data-open="cpd-reporting" aria-label="Open details">+</button>
+            </div>
+            <h3>Incident Reporting & Evidence Handling</h3>
+            <p class="muted">Clear notes, continuity and professional reporting.</p>
+          </article>
+        </div>
+
+        <div class="ctaRow reveal">
+          <div class="ctaRow__text">
+            <h3>Want your team on a rolling CPD plan?</h3>
+            <p class="muted">We can help you build a simple monthly pathway that fits shift patterns.</p>
+          </div>
+          <a class="btn" href="#contact">Request a CPD pathway</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>How it works</h2>
+          <p class="muted">A simple flow from enquiry to delivery.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Tell us what you need</h3>
+              <p class="muted">Course, dates, numbers, location and any workplace requirements.</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>We shape the session</h3>
+              <p class="muted">We’ll propose a structure and confirm what’s included (practical, e-learning, CPD, etc.).</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Delivery & follow-up</h3>
+              <p class="muted">Training delivered clearly, then we support you with next steps and CPD options.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner reveal">
+          <div>
+            <h3>Fast questions? Fast answers.</h3>
+            <p class="muted">Tap to copy contact details, or use the enquiry form below.</p>
+          </div>
+          <div class="banner__actions">
+            <button class="btn btn--ghost" data-copy="0123 826147" type="button">Copy phone</button>
+            <button class="btn btn--ghost" data-copy="info@securiwisetraining.co.uk" type="button">Copy email</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>FAQ</h2>
+          <p class="muted">Quick answers to common questions.</p>
+        </div>
+
+        <div class="faq" id="faqList">
+          <details class="faq__item reveal">
+            <summary>Do you deliver on-site?</summary>
+            <p>Yes — depending on group size and facilities. Tell us your postcode and preferred dates and we’ll advise.</p>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>Can you train small groups?</summary>
+            <p>Absolutely. We can deliver for individuals, small teams, or larger cohorts — just share numbers and requirements.</p>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>Do you offer blended learning?</summary>
+            <p>Yes. Some topics work well with e-learning plus a short practical or workshop session.</p>
+          </details>
+
+          <details class="faq__item reveal">
+            <summary>How do we book?</summary>
+            <p>Use the enquiry form below (or the quick enquiry card at the top). We’ll confirm availability and the best route.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Contact</h2>
+          <p class="muted">Send a message — we’ll reply as soon as possible.</p>
+        </div>
+
+        <div class="contactGrid">
+          <div class="contactCard reveal">
+            <h3>Get in touch</h3>
+
+            <form id="contactForm" class="form">
+              <div class="form__row">
+                <label>
+                  <span>Name</span>
+                  <input name="name" type="text" autocomplete="name" required />
+                </label>
+                <label>
+                  <span>Phone (optional)</span>
+                  <input name="phone" type="tel" autocomplete="tel" />
+                </label>
+              </div>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+
+              <label>
+                <span>What are you looking for?</span>
+                <select name="interest" required>
+                  <option value="" selected disabled>Select…</option>
+                  <option>Level 2 First Aid</option>
+                  <option>Level 3 First Aid</option>
+                  <option>ACT Awareness</option>
+                  <option>ACT Security</option>
+                  <option>eLearning / CPD</option>
+                  <option>Bespoke / Other</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Dates, numbers, location, and any specific requirements…" required></textarea>
+              </label>
+
+              <div class="form__actions">
+                <button class="btn" type="submit">Open email draft</button>
+                <button class="btn btn--ghost" type="reset">Clear</button>
+              </div>
+
+              <p class="tiny muted">This site is static. The button opens an email draft to <strong>info@securiwisetraining.co.uk</strong>.</p>
+            </form>
+          </div>
+
+          <aside class="infoCard reveal" aria-label="Contact details">
+            <h3>Details</h3>
+
+            <div class="infoList">
+              <div class="infoRow">
+                <span class="infoK">Email</span>
+                <button class="linklike" data-copy="info@securiwisetraining.co.uk">info@securiwisetraining.co.uk</button>
+              </div>
+              <div class="infoRow">
+                <span class="infoK">Phone</span>
+                <button class="linklike" data-copy="0123 826147">0123 826147</button>
+              </div>
+              <div class="infoRow">
+                <span class="infoK">Coverage</span>
+                <span class="infoV">CB24 9AD • PE29 6FN</span>
+              </div>
+            </div>
+
+            <div class="mapBox" role="img" aria-label="Map placeholder">
+              <p class="muted">
+                Add a map image here later if you want:
+                <code>images/map.jpg</code> then update the CSS for <code>.mapBox</code>.
+              </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="infoActions">
+              <a class="btn btn--small btn--ghost" href="#top">Back to top</a>
+              <button class="btn btn--small" id="callBtn" type="button">Request a call-back</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>SecuriWise Training</strong>
+        <div class="muted tiny">First Aid • ACT • eLearning/CPD</div>
+      </div>
+      <div class="footer__links">
+        <a href="#courses">Courses</a>
+        <a href="#elearning">eLearning/CPD</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="muted tiny">© <span id="year"></span> SecuriWise Training. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <dialog class="modal" id="modal">
+    <form method="dialog" class="modal__inner">
+      <div class="modal__head">
+        <h3 id="modalTitle">Title</h3>
+        <button class="iconBtn" value="cancel" aria-label="Close">×</button>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+      <div class="modal__foot">
+        <button class="btn btn--ghost" value="cancel">Close</button>
+        <a class="btn" href="#contact" id="modalCta">Enquire</a>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
